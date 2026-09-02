@@ -1,4 +1,4 @@
-# Jerry AI Video
+# Jerry AI Video2
 
 A real text-to-video web app starter for Jerry ICT World.
 
