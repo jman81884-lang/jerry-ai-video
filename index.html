@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerry AI Video</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="logo">J</span><span>JERRY <b>AI VIDEO</b></span></div>
+    <span class="badge">AI VIDEO GENERATOR</span>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">CREATE WITH AI</p>
+      <h1>Turn your words into <span>video.</span></h1>
+      <p class="sub">Describe a scene and Jerry AI Video will generate a real AI video for you.</p>
+    </section>
+
+    <section class="card">
+      <label for="prompt">What do you want to create?</label>
+      <textarea id="prompt" maxlength="1800" placeholder="Example: A cinematic drone shot over a beautiful Nigerian beach at sunset, realistic, warm lighting, gentle ocean waves..."></textarea>
+
+      <div class="row">
+        <div class="field">
+          <label for="ratio">Format</label>
+          <select id="ratio">
+            <option value="1280:720">Landscape 16:9</option>
+            <option value="720:1280">Portrait 9:16</option>
+            <option value="1104:832">Square-ish 4:3</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="duration">Duration</label>
+          <select id="duration">
+            <option value="5">5 seconds</option>
+            <option value="10">10 seconds</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn">✨ Generate Video</button>
+      <p class="note">Generation uses a paid AI video API. Your API key stays on the server.</p>
+    </section>
+
+    <section id="statusCard" class="card status hidden">
+      <div class="spinner"></div>
+      <div>
+        <h2 id="statusTitle">Generating your video…</h2>
+        <p id="statusText">This can take a little while. Keep this page open.</p>
+      </div>
+    </section>
+
+    <section id="resultCard" class="card result hidden">
+      <h2>Your video is ready 🎬</h2>
+      <video id="video" controls playsinline></video>
+      <a id="download" class="download" target="_blank" rel="noopener">Open / save video</a>
+    </section>
+
+    <section class="tips">
+      <h2>Prompt tip</h2>
+      <p>Describe the subject, action, location, camera movement, lighting and style. Example: “A confident young entrepreneur walking through a modern office, cinematic camera movement, natural light, realistic.”</p>
+    </section>
+  </main>
+
+  <footer>© 2026 Jerry AI Video · Built by Jerry ICT World</footer>
+  <script src="app.js"></script>
+</body>
+</html>
